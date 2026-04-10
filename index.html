@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>أبو العطعيط | حاسبة التصميم الداخلي - كميات وتكاليف دقيقة</title>
-    <!-- Font Awesome 6 (أيقونات أنيقة) -->
+    <title>Ata Decorations | حاسبة التصميم الداخلي - كميات وتكاليف دقيقة</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: خط عربي حديث -->
+    <!-- Google Fonts: Tajawal -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,7 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
 
         body {
             font-family: 'Tajawal', sans-serif;
@@ -24,20 +23,15 @@
             color: #1a2c3e;
         }
 
-
-        /* حاوية رئيسية أنيقة */
         .main-container {
             max-width: 1400px;
             margin: 0 auto;
         }
 
-
-        /* الهيدر */
         .hero {
             text-align: center;
             margin-bottom: 2.5rem;
         }
-
 
         .hero h1 {
             font-size: 2.5rem;
@@ -54,13 +48,11 @@
             justify-content: center;
         }
 
-
         .hero h1 i {
             background: none;
             color: #2a5298;
             font-size: 2.2rem;
         }
-
 
         .hero p {
             font-size: 1.1rem;
@@ -74,26 +66,19 @@
             backdrop-filter: blur(2px);
         }
 
-
-        /* بطاقة الحاسبة الرئيسية */
         .calculator-card {
             background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(0px);
             border-radius: 48px;
             box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            transition: all 0.2s ease;
         }
 
-
-        /* توزيع الأقسام */
         .grid-2col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             padding: 2rem 2rem;
         }
-
 
         @media (max-width: 900px) {
             .grid-2col {
@@ -109,8 +94,6 @@
             }
         }
 
-
-        /* تنسيق الأقسام الداخلية */
         .input-section, .output-section {
             background: #ffffffdd;
             border-radius: 32px;
@@ -118,7 +101,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
             border: 1px solid rgba(255,255,255,0.7);
         }
-
 
         .section-title {
             font-size: 1.6rem;
@@ -132,20 +114,16 @@
             color: #1f3a64;
         }
 
-
         .section-title i {
             font-size: 1.7rem;
             color: #2a5298;
         }
 
-
-        /* حقول الإدخال */
         .input-group {
             margin-bottom: 1.4rem;
             display: flex;
             flex-direction: column;
         }
-
 
         .input-group label {
             font-weight: 700;
@@ -157,14 +135,12 @@
             font-size: 1rem;
         }
 
-
         .input-group label i {
             width: 1.6rem;
             color: #2a6f9c;
         }
 
-
-        input, .price-input {
+        input {
             background: #f3f7fc;
             border: 1px solid #cbdbe0;
             border-radius: 28px;
@@ -176,22 +152,18 @@
             font-weight: 500;
         }
 
-
         input:focus {
             border-color: #2a5298;
             box-shadow: 0 0 0 3px rgba(42,82,152,0.2);
             background: white;
         }
 
-
-        /* مجموعة الراديو الخاصة بألواح الجسم بورد */
         .radio-group {
             background: #f0f4fa;
             border-radius: 28px;
             padding: 0.8rem 1rem;
             margin-bottom: 1.5rem;
         }
-
 
         .radio-title {
             font-weight: 800;
@@ -201,14 +173,12 @@
             display: block;
         }
 
-
         .radio-options {
             display: flex;
             flex-wrap: wrap;
             gap: 1.2rem;
             align-items: center;
         }
-
 
         .radio-options label {
             display: flex;
@@ -223,7 +193,6 @@
             border: 1px solid #ccd7e8;
         }
 
-
         .radio-options input[type="radio"] {
             accent-color: #2a5298;
             width: 18px;
@@ -231,15 +200,12 @@
             margin: 0;
         }
 
-
         .radio-options label:has(input:checked) {
             background: #2a5298;
             color: white;
             border-color: #2a5298;
         }
 
-
-        /* بطاقة النتائج */
         .result-item {
             background: #eef2fa;
             border-radius: 24px;
@@ -250,9 +216,7 @@
             align-items: baseline;
             flex-wrap: wrap;
             gap: 8px;
-            transition: 0.1s;
         }
-
 
         .result-label {
             font-weight: 700;
@@ -262,7 +226,6 @@
             align-items: center;
             gap: 10px;
         }
-
 
         .result-value {
             font-weight: 800;
@@ -274,7 +237,6 @@
             letter-spacing: 0.5px;
         }
 
-
         .cost-detail {
             background: #ffffff;
             border-radius: 28px;
@@ -283,6 +245,29 @@
             border-right: 4px solid #f4b942;
         }
 
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-weight: 600;
+        }
+
+        .cost-row span:first-child {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .currency-both {
+            font-size: 0.95rem;
+            background: #f4f9ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            direction: ltr;
+            display: inline-block;
+        }
 
         .total-cost {
             background: linear-gradient(105deg, #1e2f4b 0%, #13273f 100%);
@@ -293,15 +278,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 800;
+            flex-wrap: wrap;
+            gap: 12px;
         }
-
 
         .total-cost span:first-child i {
             margin-left: 10px;
         }
-
 
         hr {
             margin: 1rem 0;
@@ -310,31 +295,12 @@
             background: linear-gradient(to left, #c0cfdf, transparent);
         }
 
-
         .small-note {
             font-size: 0.75rem;
             color: #6c7a8e;
             margin-top: 1rem;
             text-align: center;
         }
-
-
-        button {
-            background: none;
-            border: none;
-        }
-
-
-        .price-badge {
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-
-        i.fa, i.far, i.fas {
-            margin-left: 6px;
-        }
-
 
         footer {
             text-align: center;
@@ -343,6 +309,14 @@
             color: #2c4c7c;
             opacity: 0.8;
         }
+
+        .exchange-badge {
+            background: #e9f0f9;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
@@ -350,12 +324,11 @@
     <div class="hero">
         <h1>
             <i class="fas fa-palette"></i>
-            أبو العطعيط للتصميم الداخلي
+            Ata Decorations للتصميم الداخلي
             <i class="fas fa-calculator"></i>
         </h1>
-        <p>حساب دقيق للكميات والتكاليف | أوميغا · شانيلز · ألواح الجسم بورد</p>
+        <p>حساب دقيق للكميات والتكاليف | أوميغا · شانيلز · ألواح الجسم بورد · زوايا</p>
     </div>
-
 
     <div class="calculator-card">
         <div class="grid-2col">
@@ -366,125 +339,137 @@
                     <span>بيانات الغرفة & الأسعار</span>
                 </div>
 
-
                 <!-- الطول والعرض -->
                 <div class="input-group">
                     <label><i class="fas fa-arrows-alt-h"></i> الطول (متر)</label>
-                    <input type="number" id="roomLength" value="5.0" step="0.1" min="0.1" placeholder="مثال: 5.0 متر">
+                    <input type="number" id="roomLength" value="5.0" step="0.1" min="0.1">
                 </div>
                 <div class="input-group">
                     <label><i class="fas fa-arrows-alt-v"></i> العرض (متر)</label>
-                    <input type="number" id="roomWidth" value="4.0" step="0.1" min="0.1" placeholder="مثال: 4.0 متر">
+                    <input type="number" id="roomWidth" value="4.0" step="0.1" min="0.1">
                 </div>
 
-
-                <!-- ألواح الجسم بورد : اختيار النوع -->
+                <!-- ألواح الجسم بورد -->
                 <div class="radio-group">
                     <span class="radio-title"><i class="fas fa-border-all"></i> نوع لوح الجسم بورد</span>
                     <div class="radio-options" id="boardTypeRadios">
-                        <label>
-                            <input type="radio" name="boardType" value="0" checked> 120×240 سم
-                        </label>
-                        <label>
-                            <input type="radio" name="boardType" value="1"> 120×200 سم
-                        </label>
-                        <label>
-                            <input type="radio" name="boardType" value="2"> 120×300 سم
-                        </label>
+                        <label><input type="radio" name="boardType" value="0" checked> 120×240 سم</label>
+                        <label><input type="radio" name="boardType" value="1"> 120×200 سم</label>
+                        <label><input type="radio" name="boardType" value="2"> 120×300 سم</label>
                     </div>
                     <div class="small-note" style="margin-top: 8px; text-align:right;">
                         <i class="fas fa-ruler-combined"></i> مساحة اللوح حسب الاختيار
                     </div>
                 </div>
 
+                <!-- أسعار الوحدات بالدولار -->
+                <div class="input-group">
+                    <label><i class="fas fa-coins"></i> سعر وحدة الأوميغا (دولار)</label>
+                    <input type="number" id="omegaPrice" value="12.5" step="0.5" min="0">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-charging-station"></i> سعر وحدة الشانيلز (دولار)</label>
+                    <input type="number" id="channelPrice" value="14.0" step="0.5" min="0">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-table"></i> سعر لوح الجسم بورد (دولار / للوح)</label>
+                    <input type="number" id="boardPrice" value="38.0" step="1.0" min="0">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-angle-double-right"></i> سعر الزواية (دولار / قطعة طول 3م)</label>
+                    <input type="number" id="cornerPrice" value="8.5" step="0.5" min="0">
+                </div>
 
-                <!-- أسعار الوحدات -->
+                <!-- سعر الصرف + وحدة الليرة -->
                 <div class="input-group">
-                    <label><i class="fas fa-coins"></i> سعر وحدة الأوميغا (ريال)</label>
-                    <input type="number" id="omegaPrice" value="12.5" step="0.5" min="0" placeholder="سعر القطعة">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-charging-station"></i> سعر وحدة الشانيلز (ريال)</label>
-                    <input type="number" id="channelPrice" value="14.0" step="0.5" min="0" placeholder="سعر القطعة">
-                </div>
-                <div class="input-group">
-                    <label><i class="fas fa-table"></i> سعر لوح الجسم بورد (ريال / للوح)</label>
-                    <input type="number" id="boardPrice" value="38.0" step="1.0" min="0" placeholder="سعر اللوح حسب النوع المختار">
+                    <label><i class="fas fa-exchange-alt"></i> سعر صرف الدولار مقابل الليرة السورية</label>
+                    <input type="number" id="exchangeRate" value="15000" step="100" min="0" placeholder="مثال: 15000 ل.س">
                 </div>
                 <div class="small-note">
-                    <i class="fas fa-info-circle"></i> الأسعار قابلة للتعديل، يتم التقريب لأقرب عدد صحيح للكميات.
+                    <i class="fas fa-info-circle"></i> الأسعار بالدولار، يتم تحويلها تلقائياً بسعر الصرف المحدد.
                 </div>
             </div>
-
 
             <!-- قسم النتائج والتفاصيل -->
             <div class="output-section">
                 <div class="section-title">
                     <i class="fas fa-file-invoice-dollar"></i>
-                    <span>الكميات والتكلفة التفصيلية</span>
+                    <span>الكميات والتكلفة (دولار / ليرة سورية)</span>
                 </div>
 
-
-                <!-- مساحة الغرفة -->
+                <!-- مساحة الغرفة + المحيط -->
                 <div class="result-item">
                     <div class="result-label"><i class="fas fa-vector-square"></i> مساحة الغرفة</div>
                     <div class="result-value" id="roomAreaDisplay">0.00 م²</div>
                 </div>
-
-
-                <!-- كميات -->
                 <div class="result-item">
-                    <div class="result-label"><i class="fas fa-bezier-curve"></i> عدد قطع الأوميغا (الكمية)</div>
+                    <div class="result-label"><i class="fas fa-arrows-alt"></i> محيط الغرفة</div>
+                    <div class="result-value" id="perimeterDisplay">0.00 م</div>
+                </div>
+
+                <!-- كميات المواد -->
+                <div class="result-item">
+                    <div class="result-label"><i class="fas fa-bezier-curve"></i> عدد قطع الأوميغا</div>
                     <div class="result-value" id="omegaQty">0</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label"><i class="fas fa-stream"></i> عدد قطع الشانيلز (الكمية)</div>
+                    <div class="result-label"><i class="fas fa-stream"></i> عدد قطع الشانيلز</div>
                     <div class="result-value" id="channelQty">0</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label"><i class="fas fa-cubes"></i> عدد ألواح الجسم بورد المطلوبة</div>
+                    <div class="result-label"><i class="fas fa-cubes"></i> عدد ألواح الجسم بورد</div>
                     <div class="result-value" id="boardQty">0</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label"><i class="fas fa-angle-double-right"></i> عدد الزوايا (طول 3م)</div>
+                    <div class="result-value" id="cornerQty">0</div>
                 </div>
                 
                 <hr>
-                <!-- تفصيل الكلفة -->
+                <!-- تفصيل الكلفة بالعملتين -->
                 <div class="cost-detail">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                    <div class="cost-row">
                         <span><i class="fas fa-calculator"></i> <strong>كلفة الأوميغا</strong></span>
-                        <span id="omegaCostDisplay" style="font-weight: 800;">0.00 ريال</span>
+                        <span id="omegaCostDisplay" class="currency-both">0.00 دولار</span>
                     </div>
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                    <div class="cost-row">
                         <span><i class="fas fa-charging-station"></i> <strong>كلفة الشانيلز</strong></span>
-                        <span id="channelCostDisplay" style="font-weight: 800;">0.00 ريال</span>
+                        <span id="channelCostDisplay" class="currency-both">0.00 دولار</span>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
+                    <div class="cost-row">
                         <span><i class="fas fa-table"></i> <strong>كلفة ألواح الجسم بورد</strong></span>
-                        <span id="boardCostDisplay" style="font-weight: 800;">0.00 ريال</span>
+                        <span id="boardCostDisplay" class="currency-both">0.00 دولار</span>
+                    </div>
+                    <div class="cost-row">
+                        <span><i class="fas fa-angle-double-right"></i> <strong>كلفة الزوايا</strong></span>
+                        <span id="cornerCostDisplay" class="currency-both">0.00 دولار</span>
                     </div>
                 </div>
-
 
                 <!-- المجموع الكلي -->
                 <div class="total-cost">
                     <span><i class="fas fa-money-bill-wave"></i> المجموع الكلي</span>
-                    <span id="totalCostDisplay">0.00 ريال</span>
+                    <span id="totalCostDisplay">0.00 دولار</span>
+                </div>
+                <div class="total-cost" style="background: linear-gradient(105deg, #2f4b2f, #1c3a1c); margin-top: 0.5rem;">
+                    <span><i class="fas fa-lira-sign"></i> بالليرة السورية</span>
+                    <span id="totalCostSYPDisplay">0 ل.س</span>
                 </div>
 
-
-                <!-- معلومات إضافية عن الصيغة -->
+                <!-- ملاحظات المعادلات -->
                 <div class="small-note" style="margin-top: 1rem;">
-                    <i class="fas fa-lightbulb"></i> المعادلات: <strong>الأوميغا</strong> = (الطول×العرض) ÷ 1.6 &nbsp;|&nbsp;
-                    <strong>الشانيلز</strong> = (الطول×العرض) ÷ 1.8 &nbsp;|&nbsp;
-                    <strong>ألواح الجسم بورد</strong> = المساحة ÷ مساحة اللوح (مقرب للأعلى)
+                    <i class="fas fa-lightbulb"></i> المعادلات: <strong>الأوميغا</strong> = المساحة ÷ 1.6 &nbsp;|&nbsp;
+                    <strong>الشانيلز</strong> = المساحة ÷ 1.8 &nbsp;|&nbsp;
+                    <strong>ألواح الجسم بورد</strong> = المساحة ÷ مساحة اللوح (مقرب) &nbsp;|&nbsp;
+                    <strong>الزوايا</strong> = محيط الغرفة ÷ 3 (مقرب)
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <i class="fas fa-hard-hat"></i> تصميم داخلي احترافي | حساب الكميات بدقة عالية
+        <i class="fas fa-hard-hat"></i> Ata Decorations | دقة في الكميات والتكاليف بالدولار والليرة السورية
     </footer>
 </div>
-
 
 <script>
     // DOM elements
@@ -493,139 +478,155 @@
     const omegaPriceInput = document.getElementById('omegaPrice');
     const channelPriceInput = document.getElementById('channelPrice');
     const boardPriceInput = document.getElementById('boardPrice');
+    const cornerPriceInput = document.getElementById('cornerPrice');
+    const exchangeRateInput = document.getElementById('exchangeRate');
     const radioButtons = document.querySelectorAll('input[name="boardType"]');
-
 
     // Display spans
     const roomAreaSpan = document.getElementById('roomAreaDisplay');
+    const perimeterSpan = document.getElementById('perimeterDisplay');
     const omegaQtySpan = document.getElementById('omegaQty');
     const channelQtySpan = document.getElementById('channelQty');
     const boardQtySpan = document.getElementById('boardQty');
+    const cornerQtySpan = document.getElementById('cornerQty');
     const omegaCostSpan = document.getElementById('omegaCostDisplay');
     const channelCostSpan = document.getElementById('channelCostDisplay');
     const boardCostSpan = document.getElementById('boardCostDisplay');
+    const cornerCostSpan = document.getElementById('cornerCostDisplay');
     const totalCostSpan = document.getElementById('totalCostDisplay');
+    const totalCostSYPDisplay = document.getElementById('totalCostSYPDisplay');
 
-
-    // خريطة مساحات الألواح بناءً على القيمة (بالمتر المربع)
-    // الأبعاد بالسنتيمتر: 120*240 -> 1.2*2.4 = 2.88 m²
-    // 120*200 -> 1.2*2 = 2.4 m²
-    // 120*300 -> 1.2*3 = 3.6 m²
+    // مساحات الألواح (م²)
     const boardAreaMap = {
         0: 2.88,   // 120x240
         1: 2.4,    // 120x200
         2: 3.6     // 120x300
     };
 
-
-    // دالة للحصول على نوع اللوح المختار (0,1,2)
     function getSelectedBoardType() {
         for (let i = 0; i < radioButtons.length; i++) {
-            if (radioButtons[i].checked) {
-                return parseInt(radioButtons[i].value);
-            }
+            if (radioButtons[i].checked) return parseInt(radioButtons[i].value);
         }
-        return 0; // افتراضي
+        return 0;
     }
 
+    // تنسيق العملة المزدوجة (دولار + ليرة)
+    function formatCurrencyPair(usdValue, exchangeRate) {
+        if (isNaN(usdValue) || usdValue === undefined) usdValue = 0;
+        let sypValue = usdValue * exchangeRate;
+        return `${usdValue.toFixed(2)} دولار  (${Math.round(sypValue).toLocaleString()} ل.س)`;
+    }
 
-    // دالة الحساب الرئيسية (كل شيء)
+    // الحساب الرئيسي
     function calculateAll() {
-        // 1. قراءة الطول والعرض
+        // قراءة الأبعاد
         let lengthVal = parseFloat(lengthInput.value);
         let widthVal = parseFloat(widthInput.value);
-        
-        // التحقق من الصلاحية
         if (isNaN(lengthVal) || lengthVal <= 0) lengthVal = 0;
         if (isNaN(widthVal) || widthVal <= 0) widthVal = 0;
         
         const roomArea = lengthVal * widthVal;
-        roomAreaSpan.innerText = roomArea.toFixed(2) + " م²";
+        const perimeter = 2 * (lengthVal + widthVal);
         
-        // 2. حساب الأوميغا والشانيلز (مع التقريب للأعلى)
-        let omegaQty = 0;
-        let channelQty = 0;
+        roomAreaSpan.innerText = roomArea.toFixed(2) + " م²";
+        perimeterSpan.innerText = perimeter.toFixed(2) + " م";
+        
+        // الأوميغا والشانيلز
+        let omegaQty = 0, channelQty = 0;
         if (roomArea > 0) {
             omegaQty = Math.ceil(roomArea / 1.6);
             channelQty = Math.ceil(roomArea / 1.8);
-        } else {
-            omegaQty = 0;
-            channelQty = 0;
         }
         
-        // 3. حساب ألواح الجسم بورد بناءً على النوع المختار
+        // ألواح الجسم بورد
         const selectedType = getSelectedBoardType();
         const boardUnitArea = boardAreaMap[selectedType];
         let boardQty = 0;
         if (roomArea > 0 && boardUnitArea > 0) {
             boardQty = Math.ceil(roomArea / boardUnitArea);
-        } else {
-            boardQty = 0;
+        }
+        
+        // الزوايا: محيط الغرفة / 3
+        let cornerQty = 0;
+        if (perimeter > 0) {
+            cornerQty = Math.ceil(perimeter / 3);
         }
         
         // عرض الكميات
         omegaQtySpan.innerText = omegaQty;
         channelQtySpan.innerText = channelQty;
         boardQtySpan.innerText = boardQty;
+        cornerQtySpan.innerText = cornerQty;
         
-        // 4. قراءة الأسعار
+        // الأسعار (دولار)
         let omegaUnitPrice = parseFloat(omegaPriceInput.value);
         let channelUnitPrice = parseFloat(channelPriceInput.value);
         let boardUnitPrice = parseFloat(boardPriceInput.value);
+        let cornerUnitPrice = parseFloat(cornerPriceInput.value);
+        let exchangeRate = parseFloat(exchangeRateInput.value);
         
         if (isNaN(omegaUnitPrice) || omegaUnitPrice < 0) omegaUnitPrice = 0;
         if (isNaN(channelUnitPrice) || channelUnitPrice < 0) channelUnitPrice = 0;
         if (isNaN(boardUnitPrice) || boardUnitPrice < 0) boardUnitPrice = 0;
+        if (isNaN(cornerUnitPrice) || cornerUnitPrice < 0) cornerUnitPrice = 0;
+        if (isNaN(exchangeRate) || exchangeRate <= 0) exchangeRate = 1; // افتراضي لتجنب الأخطاء
         
-        // 5. حساب الكلفة
-        const omegaCost = omegaQty * omegaUnitPrice;
-        const channelCost = channelQty * channelUnitPrice;
-        const boardCost = boardQty * boardUnitPrice;
-        const totalCost = omegaCost + channelCost + boardCost;
+        // حساب التكاليف بالدولار
+        const omegaCostUSD = omegaQty * omegaUnitPrice;
+        const channelCostUSD = channelQty * channelUnitPrice;
+        const boardCostUSD = boardQty * boardUnitPrice;
+        const cornerCostUSD = cornerQty * cornerUnitPrice;
+        const totalUSD = omegaCostUSD + channelCostUSD + boardCostUSD + cornerCostUSD;
+        const totalSYP = totalUSD * exchangeRate;
         
-        // عرض التكاليف بتنسيق ريال (عدد عشري)
-        omegaCostSpan.innerText = omegaCost.toFixed(2) + " ريال";
-        channelCostSpan.innerText = channelCost.toFixed(2) + " ريال";
-        boardCostSpan.innerText = boardCost.toFixed(2) + " ريال";
-        totalCostSpan.innerText = totalCost.toFixed(2) + " ريال";
+        // عرض التكاليف بصيغة مزدوجة
+        omegaCostSpan.innerText = formatCurrencyPair(omegaCostUSD, exchangeRate);
+        channelCostSpan.innerText = formatCurrencyPair(channelCostUSD, exchangeRate);
+        boardCostSpan.innerText = formatCurrencyPair(boardCostUSD, exchangeRate);
+        cornerCostSpan.innerText = formatCurrencyPair(cornerCostUSD, exchangeRate);
+        
+        totalCostSpan.innerText = `${totalUSD.toFixed(2)} دولار`;
+        totalCostSYPDisplay.innerText = `${Math.round(totalSYP).toLocaleString()} ل.س`;
     }
     
-    // دالة إعادة الحساب مع تأكيد أن كل المدخلات تم تحديثها
     function refreshCalculation() {
         calculateAll();
     }
     
-    // إضافة مستمعي الأحداث لجميع المدخلات
+    // مستمعات الأحداث
     lengthInput.addEventListener('input', refreshCalculation);
     widthInput.addEventListener('input', refreshCalculation);
     omegaPriceInput.addEventListener('input', refreshCalculation);
     channelPriceInput.addEventListener('input', refreshCalculation);
     boardPriceInput.addEventListener('input', refreshCalculation);
+    cornerPriceInput.addEventListener('input', refreshCalculation);
+    exchangeRateInput.addEventListener('input', refreshCalculation);
+    radioButtons.forEach(radio => radio.addEventListener('change', refreshCalculation));
     
-    // إضافة مستمع لأزرار الراديو (نوع اللوح)
-    radioButtons.forEach(radio => {
-        radio.addEventListener('change', refreshCalculation);
+    // معالجة الحقول الفارغة أو السالبة
+    const allNumberInputs = [lengthInput, widthInput, omegaPriceInput, channelPriceInput, boardPriceInput, cornerPriceInput, exchangeRateInput];
+    allNumberInputs.forEach(inp => {
+        inp.addEventListener('blur', function() {
+            let v = parseFloat(this.value);
+            if (isNaN(v)) this.value = 0;
+            else if (v < 0) this.value = 0;
+            refreshCalculation();
+        });
     });
     
-    // بالإضافة إلى تغيير الأسعار مباشرة
-    // استدعاء أولي للحسابات فور تحميل الصفحة
-    refreshCalculation();
-    
-    // (اختياري) تنسيق إضافي لعرض مساحة اللوح عند تغيير النوع، بدون التأثير على الحسابات لكنه يعطي إحساس احترافي
+    // تحديث التلميح الديناميكي لنوع اللوح
     function updateBoardInfoHint() {
         const selected = getSelectedBoardType();
         let dimText = "";
         if (selected === 0) dimText = "120×240 سم (2.88 م²)";
         else if (selected === 1) dimText = "120×200 سم (2.40 م²)";
         else dimText = "120×300 سم (3.60 م²)";
-        // نضيف تلميح صغير في مكان أنيق (ليس إجباري لكنه تحسين تجربة)
         const hintSpan = document.querySelector('.radio-group .small-note');
         if (hintSpan) {
             hintSpan.innerHTML = `<i class="fas fa-ruler-combined"></i> النوع المختار: ${dimText} | مساحة اللوح: ${boardAreaMap[selected].toFixed(2)} م²`;
         }
     }
     
-    // ربط تحديث التلميح بتغيير الراديو
     radioButtons.forEach(radio => {
         radio.addEventListener('change', () => {
             refreshCalculation();
@@ -633,28 +634,8 @@
         });
     });
     
-    // تحديث التلميح عند تحميل الصفحة
     updateBoardInfoHint();
-    
-    // دعم إدخال القيم بعلامة عشرية ومرونة
-    // (جميع الحقول معطاة step, لكن نتأكد من تحويل صحيح)
-    // إضافة منع الكتابة غير العددية لا داعي لها
-    // التأكد من أنه في حالة ادخال قيم فارغة نعطي قيمة صفر
-    const allNumberInputs = [lengthInput, widthInput, omegaPriceInput, channelPriceInput, boardPriceInput];
-    allNumberInputs.forEach(inp => {
-        inp.addEventListener('blur', function() {
-            let v = parseFloat(this.value);
-            if (isNaN(v)) {
-                this.value = 0;
-            } else if (v < 0) {
-                this.value = 0;
-            }
-            refreshCalculation();
-        });
-    });
-    
-    // رسالة ترحيب صامتة
-    console.log("حاسبة أبو العطعيط - تعمل بكفاءة");
+    refreshCalculation();
 </script>
 </body>
 </html>
